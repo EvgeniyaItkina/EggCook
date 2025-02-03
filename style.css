@@ -77,6 +77,20 @@ h3 {
     justify-content: center;
     margin-top: 20px;
 }
+
+.cooking-instructions {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 600px;
+    line-height: 1.6;
+    background: #fff3cd;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ffcc00;
+}
+
+
 .action {
     display: flex;
     flex-direction: column;
