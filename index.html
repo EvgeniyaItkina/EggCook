@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Eggs</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Choose which egg you want to cook</h1>
+    <div class="choose-egg">
+        <div class="egg-box">
+            <h3>soft-boiled egg</h3>
+            <button class="eggs soft-boiled-egg"></button>
+        </div>
+        <div class="egg-box">
+            <h3>medium-boiled egg</h3>
+            <button class="eggs medium-boiled-egg"></button>
+        </div>
+        <div class="egg-box">
+            <h3>hard-boiled egg</h3>
+            <button class="eggs hard-boiled-egg"></button>
+        </div>
+    </div>
+    <div class="action">
+        <button class="egg-timer">Start</button>
+        <div class="timer">00:00:00</div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Your eggs are ready! 🥚⏳</p>
+            <button id="close-modal">OK</button>
+        </div>
+    </div>
+
+    <audio id="alarm-sound" src="music/alarm.mp3"></audio>
+
+</body>
+
+</html>
