@@ -11,7 +11,7 @@ A simple and interactive **egg cooking timer** with a sleek design, modals, and 
 ✅ **Interactive Buttons** – Each egg type sets a specific time.  
 ✅ **Alarm Sound** – Plays when the timer reaches 00:00:00.  
 ✅ **Modal Popup** – Shows a message when the eggs are ready.  
-✅ **Mobile Responsive** – Works smoothly on desktop and mobile.
+✅ **Mobile Responsive** – Works smoothly on desktop and mobile.  
 ✅ **Default Timer Behavior** – If the "Start" button is pressed without selecting an egg, the default time is 00:00:00, triggering the alarm immediately.
 
 ---
