@@ -1,13 +1,22 @@
+const addTimeButton = document.getElementById('add-seconds');
 const buttonSoftEgg = document.querySelector('.soft-boiled-egg');
 const buttonMediumEgg = document.querySelector('.medium-boiled-egg');
 const buttonHardEgg = document.querySelector('.hard-boiled-egg');
 const timer = document.querySelector('.timer');
-const startButton = document.querySelector('.egg-timer');
+const startButton = document.getElementById('start');
 const modal = document.getElementById('modal');
 const closeModalButton = document.getElementById('close-modal');
 const alarmSound = document.getElementById('alarm-sound');
+
+//variablel to stop the timer
 let countdown;
+//variable to check if the timer was reset manually
 let manualReset = false;
+
+//change time on button click
+buttonSoftEgg.addEventListener('click', () => setTime("00:03:00"));
+buttonMediumEgg.addEventListener('click', () => setTime("00:05:00"));
+buttonHardEgg.addEventListener('click', () => setTime("00:10:00"));
 
 //set time
 function setTime(time) {
@@ -20,10 +29,33 @@ function setTime(time) {
     closeModal();
 }
 
-//change time on button click
-buttonSoftEgg.addEventListener('click', () => setTime("00:03:00"));
-buttonMediumEgg.addEventListener('click', () => setTime("00:05:00"));
-buttonHardEgg.addEventListener('click', () => setTime("00:10:00"));
+// one function to update timer
+function updateTimer(hours, minutes, seconds) {
+    if (seconds < 0) {
+        if (minutes > 0) {
+            minutes--;
+            seconds = 59;
+        } else if (hours > 0) {
+            hours--;
+            minutes = 59;
+            seconds = 59;
+        } else {
+            seconds = 0; 
+        }
+    }
+    let formattedTime =
+            (hours < 10 ? '0' : '') + hours + ':' +
+            (minutes < 10 ? '0' : '') + minutes + ':' +
+            (seconds < 10 ? '0' : '') + seconds;
+
+        timer.innerHTML = formattedTime;
+}
+
+//add 15 seconds to timer
+addTimeButton.addEventListener('click', () => {
+    let [hours, minutes, seconds] = timer.innerHTML.split(':').map(Number);
+    updateTimer(hours, minutes, seconds + 15);
+});
 
 //start timer
 startButton.addEventListener('click', function () {
@@ -45,24 +77,7 @@ startButton.addEventListener('click', function () {
             return;
         }
 
-        if (seconds === 0) {
-            if (minutes === 0) {
-                hours--;
-                minutes = 59;
-            } else {
-                minutes--;
-            }
-            seconds = 59;
-        } else {
-            seconds--;
-        }
-
-        let formattedTime =
-            (hours < 10 ? '0' : '') + hours + ':' +
-            (minutes < 10 ? '0' : '') + minutes + ':' +
-            (seconds < 10 ? '0' : '') + seconds;
-
-        timer.innerHTML = formattedTime;
+        updateTimer(hours, minutes, seconds - 1);
     }, 1000);
 });
 
