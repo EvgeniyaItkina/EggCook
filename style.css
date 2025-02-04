@@ -196,3 +196,23 @@ h3 {
 #close-modal:hover {
     background-color: #ffb700;
 }
+
+
+.donate-button {
+    background-color: #ff8900;
+    color: #333;
+    font-size: 18px;
+    padding: 6px 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+}
+
+.donate-button:hover {
+    background-color: #ffdb4d;
+}
+ a {
+    text-decoration: none;
+    color: #333;}

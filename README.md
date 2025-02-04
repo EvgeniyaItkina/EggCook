@@ -16,6 +16,7 @@ A simple and interactive **egg cooking timer** with a sleek design, modals, and 
 ✅ Auto Reset – Clicking outside resets the timer to 00:00:00.  
 ✅ Looping Alarm – The sound plays in a loop until the modal is closed.  
 ✅ Default Timer Behavior – If the "Start" button is pressed without selecting an egg, the default time is 00:00:00, triggering the alarm immediately.  
+✅ **Support the App** – Click the "Donate" button to support future updates.  
 
 ---
 
@@ -87,11 +88,30 @@ Feel free to **fork** this project, submit **issues**, or send **pull requests**
 
 ---
 
+## ☕ Support the Project
+If you like this project and want to support future updates, consider buying me a coffee.  
+
+[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue?style=for-the-badge&logo=paypal)](https://www.paypal.com/paypalme/EvgeniyaItkina)
+
+
+---
+
+## 🔒 Security & Privacy
+
+This project does **not** store or process payments directly.  
+All donations are handled securely via [PayPal](https://www.paypal.com/).  
+
+- **No API keys or sensitive data are exposed** in the code.
+- The **PayPal.me link is safe** and redirects users to an official PayPal donation page.
+- The project **does not collect or store any user information**.
+
+---
+
 ## 📜 License
 This project is open-source under the **MIT License**.
 
 ---
-📬 Contact
+## 📬 Contact
 
 Email: eva.last.ita@gmail.com
 
