@@ -30,26 +30,29 @@ function setTime(time) {
 }
 
 // one function to update timer
-function updateTimer(hours, minutes, seconds) {
-    if (seconds < 0) {
-        if (minutes > 0) {
-            minutes--;
-            seconds = 59;
-        } else if (hours > 0) {
-            hours--;
-            minutes = 59;
-            seconds = 59;
-        } else {
-            seconds = 0; 
-        }
-    }
-    let formattedTime =
-            (hours < 10 ? '0' : '') + hours + ':' +
-            (minutes < 10 ? '0' : '') + minutes + ':' +
-            (seconds < 10 ? '0' : '') + seconds;
+addTimeButton.addEventListener('click', () => {
+    let [hours, minutes, seconds] = timer.innerHTML.split(':').map(Number);
 
-        timer.innerHTML = formattedTime;
-}
+    // Добавляем 15 секунд
+    seconds += 15;
+
+    // Корректируем минуты и часы, если нужно
+    if (seconds >= 60) {
+        minutes += Math.floor(seconds / 60);
+        seconds = seconds % 60;
+    }
+
+    if (minutes >= 60) {
+        hours += Math.floor(minutes / 60);
+        minutes = minutes % 60;
+    }
+
+    // Обновляем таймер
+    timer.innerHTML = 
+        (hours < 10 ? '0' : '') + hours + ':' +
+        (minutes < 10 ? '0' : '') + minutes + ':' +
+        (seconds < 10 ? '0' : '') + seconds;
+});
 
 //add 15 seconds to timer
 addTimeButton.addEventListener('click', () => {

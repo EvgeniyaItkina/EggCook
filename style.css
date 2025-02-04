@@ -21,9 +21,9 @@ body {
 }
 
 .eggs:hover {
-    transform: scale(1.05); 
+    transform: scale(1.15); 
     border-color: #888;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1.2); 
 }
 
 .soft-boiled-egg {
@@ -124,13 +124,13 @@ h3 {
 }
 
 .egg-timer:hover {
-    background-color: #ffdb4d; /* Немного светлее при наведении */
-    transform: scale(1.05); /* Лёгкое увеличение */
+    background-color: #ffdb4d;
+    transform: scale(1.05); 
 }
 
 .egg-timer:active {
-    background-color: #e6b800; /* Более тёмный оттенок при нажатии */
-    transform: scale(0.95); /* Немного уменьшится, создавая эффект клика */
+    background-color: #e6b800; 
+    transform: scale(0.95); 
 }
 
 @media screen and (max-width: 768px) {
@@ -139,12 +139,7 @@ h3 {
     }
     .choose-egg {
         flex-direction: column;
-        margin-top: 40px;
     }
-    .action {
-        margin-top: 40px;
-    }
-    
 }
 
 .modal {
