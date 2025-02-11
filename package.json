@@ -1,0 +1,19 @@
+{
+  "name": "eggcook",
+  "version": "1.0.0",
+  "description": "![Egg Timer](https://img.shields.io/badge/Egg%20Timer-FEAA00?style=for-the-badge&logo=google-chrome&logoColor=white)  \r A simple and interactive **egg cooking timer** with a sleek design, modals, and alarm sounds.",
+  "main": "script.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "playwright test test/timer.test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "serve": "^14.2.4"
+  }
+}
